@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.section{
+    padding: 4rem 0 2rem;
+}
+
+.container{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.icon{
+    font-size: 2rem;
+    cursor: pointer;
+
+}
+
+.flex{
+    display: flex;
+    align-items: center; 
+}
+
+.grid{
+    display: grid;
+    align-items: center;
+}
+
+.btn{
+    padding: .6rem 1.5rem;
+    border-radius: 8px;
+    background-color: rgba(14, 47, 82, 0.904);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn a{
+    color: white;
+    font-weight:500;
+
+}
+
+.btn:hover{
+    background-color: lightskyblue;
+}
+
+img, video{
+    width: 100%;
+    height: auto;
+}
+
+input{
+    font-size: 100%;
+}
+
+body{
+    background-color: rgba(245, 248, 249, 0.9);
+}
+.header{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(245, 248, 249, 0.8);
+    width: 100%;
+    padding: 1rem;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(14, 47, 82, 0.904);
+
+    .logo{
+        color: rgba(14, 47, 82, 0.904);
+        font-weight: 600;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+
+         .icon{
+             font-size: 25px;
+             color: rgba(14, 47, 82, 0.904);
+             transform: translate(5px);
+         }
+    }
+}
+@media screen and (min-width: 970px) {
+    .cardDiv{
+        padding: rem 1rem;
+        grid-template-columns: repeat(3,1fr);
+        height: 200px;
+    }
+    .navbarSection{
+        width: 100%;
+        padding: 2rem;
+    }
+}
+    
+@media screen and (min-width: 769px) {
+    .toggleNavbar,.closeNavbar{
+        display: none;
+    }
+    .header{
+        padding: 1.5rem 2rem;
+    }
+    .navBar{
+        .navLists{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+
+            .navItem{
+                .navLink{
+                    color: rgb(3, 29, 52);
+                    padding: 0 0.45rem;
+                    font-size: 0.9rem;
+                    font-weight: 500;
+
+                    &:hover{
+                        color: lightskyblue;
+                    }
+                }
+            }
+
+            
+
+            
+
+            
+        }
+
+    }
+    .secContent{
+        display: grid;
+       gap: 1rem;
+        grid-template-columns: repeat(2,1fr);
+    }
+   
+    
+}
+
+@media  screen and (max-width: 768px) {
+    .navBar{
+        position: absolute;
+        background-color: rgb(230, 237, 249);
+        height: max-content;
+        width: 80%;
+        border-radius: 1rem;
+        top: -500rem;
+        left: 50%;
+        padding: 1rem;
+        transform: translate(-50%);
+        z-index: 2000;
+        box-shadow: 0 2px 4px rgba(14, 47, 82, 0.904);
+        transition: .5s ease-in-out;
+
+        .navLists{
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            margin: auto;
+            padding: .5rem 0;
+
+            .navItem{
+                padding:  .5rem 0;
+
+                .navLink{
+                    color: rgba(14, 47, 82, 0.904);
+                    font-size: .9rem;
+                    font-weight: 600;
+                    &:hover{
+                        color: lightskyblue;
+                    }
+                }
+            }
+            .btn{
+                margin-top: 1rem;
+                a{
+                    font-weight: 600;
+                    color: white;
+                }
+            }
+        }
+        .closeNavbar{
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            color: rgba(14, 47, 82, 0.904);
+            &:hover{
+                color: lightskyblue;
+            }
+        }
+    }
+    .activeNavbar{
+        top: 7rem;
+    }
+}
+
+.toggleNavbar{
+    .icon{
+        font-size: 25px;
+        color: rgba(14, 47, 82, 0.904);
+    }
+
+    &:hover.icon{
+        color: lightskyblue;
+    }
+}
+
+
+.home{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+    .overlay{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(54, 86, 106);
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        mix-blend-mode: hard-light;
+        
+    }
+
+    video{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        object-fit: cover;
+
+    }
+
+.homeContent{
+    width: 100%;
+    height: max-content;
+    padding: 8rem 4.5rem 9rem;
+    display: flex;
+    row-gap: 3rem;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    margin: auto;
+    color: rgba(255, 255, 255, 0.904);
+    z-index: 100;
+    font-size: 15px;
+
+    .container{
+        width: 80%;
+    }
+}
+
+.cardDiv{
+    position: relative;
+    padding: 2rem 4rem;
+    background-color: rgba(245, 248, 249, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(1, 11, 23, 0.904);
+    width: auto;
+    height: 340px;
+    gap: 0.5rem;
+}
+
+    label{
+        display: block;
+        color: rgba(7, 40, 76, 0.904);
+        padding-bottom: 10px;
+        font-size: 18px;
+        font-weight: 500;
+
+    }
+.label_total{
+    justify-content: space-between;
+    align-items: center;
+}
+    .total{
+        color: rgba(14, 47, 82, 0.904);
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+
+.input{
+    height:40px;
+    padding: 0 1rem;
+    background-color: rgb(244, 241, 241);
+    border-radius: 3rem;
+}
+input{
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 500;
+ 
+    .icon{
+        font-size: 20px;
+        margin: 0 5px;
+        color: rgb(92, 40, 40);
+        font-weight: 600;
+        &:hover{
+            color: lightskyblue;
+        }
+    }
+ /* .icon{
+    font-size: 18px;
+    color: rgba(14, 47, 82, 0.904)
+    !important;
+    margin-left: 10px;
+
+} */
+}
+
+.searchOptions{
+    position: absolute;
+    background-color: rgba(14, 47, 82, 10);
+    width: max-content;
+    bottom: -0.7rem;
+    column-gap: .8rem;
+    padding: 3px 1rem;
+    border-radius: 3rem;
+    left: 50%;
+    bottom: 4px;
+    transform: translate(-50%);
+    justify-content: center;
+    cursor: pointer;
+
+&:hover{
+    background-color: lightskyblue;
+}
+}
+.homeFooterIcons{
+    width: 100%;
+    justify-content: space-between;
+   
+    
+    .icon{
+        font-size: 20px;
+        margin: 0 5px;
+        color: rgb(252, 248, 248);
+        font-weight: 600;
+        &:hover{
+            color: lightskyblue;
+        }
+    }
+
+}
+.main{
+    width: 100%;
+    background-color: rgb(216, 219, 222);
+    gap: 1rem;
+
+    .secTitle{
+        .title{
+            position: relative;
+            width: max-content;
+            color: rgb(3, 24, 55);
+            margin: 3rem 0;
+            z-index: 2;
+
+            &::after{
+                position: absolute;
+                content: '';
+                background-color: rgb(142, 207, 248);
+                height: 5px;
+                width: 120px;
+                right: 0;
+                bottom: 5px;
+                z-index: -1;
+            }
+        }
+                .secContent{
+            justify-content: center;
+            gap: 2rem;
+           
+
+          
+        }
+    
+    }
+}
+.singleDestination{
+    height: 100%;
+    display: grid;
+    row-gap: 40px;
+    padding: 2rem;
+    border-radius: 10px;
+    align-items: center;
+    background-color: rgba(245, 248, 249, 0.8);
+    box-shadow: 0 2px 4px rgba(14, 47, 82, 0.904);
+    overflow: hidden;
+
+    &:hover{
+        background-color: rgb(202, 210, 218);
+    }
+ }
+ .imageDiv{
+    border: 3px solid rgba(14, 47, 82, 0.904);
+    box-shadow: 0 4px 4px rgba(14, 47, 82, 0.904);
+ }
+    .destTitle{
+        font-size: 25px;
+     }
+     .name{
+        font-size: 16px;
+        justify-content: ceter;
+        
+     }
+     .fees{
+        font-size: 15px;
+        width: 100%;
+        justify-content: space-between;
+        padding: 1rem;
+        margin: 1rem 0;
+        border-top: 1.5px solid;
+        border-bottom: 1.5px solid;
+     }
+     .desc{
+        font-size: 15px;
+        gap: 2rem;
+     }
+
+     .contactDiv{
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 1rem;
+        border-top: 2px solid;
+        background-color: rgb(249, 251, 252);
+     }
+     .inpp{
+        border: 1px solid;
+        gap: 1rem;
+        border-radius: 4px;
+
+     }
